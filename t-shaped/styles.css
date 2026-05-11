@@ -485,6 +485,18 @@ h6 {
   height: calc(1.125em * 1.38);
 }
 
+/* Unicode / text glyph aligned to --icon-size (same visual weight as inline SVGs on buttons). */
+.btn-with-icon__glyph {
+  flex-shrink: 0;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--icon-size) * 0.92);
+  line-height: 1;
+}
+
 /* Export row: stroke glyph; hover = brief hide, then tray draws, then arrow (pathLength 100 + dash, like guide pills) */
 .btn-download-icon {
   display: block;
