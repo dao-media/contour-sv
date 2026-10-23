@@ -1,8 +1,8 @@
 {
-  "name": "t-shaped-email-functions",
+  "name": "contour-skill-visualizer-functions",
   "private": true,
   "version": "0.15.0",
-  "description": "Netlify functions for T-shaped tool email delivery",
+  "description": "Netlify functions for Contour Skill Visualizer email delivery",
   "scripts": {
     "dev": "netlify dev",
     "dev:shape": "cd t-shaped && npm run dev",

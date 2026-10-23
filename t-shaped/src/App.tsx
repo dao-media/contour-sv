@@ -54,7 +54,7 @@ export default function App() {
         <header class="app-header">
           <div class="app-header-inner">
             <div class="app-header-copy">
-              <h1>T-Shaped</h1>
+              <h1>Contour Skill Visualizer</h1>
               <p>Map your strengths, plot your design profile, and export it.</p>
             </div>
             <div class="app-header-theme" id="theme-toggle-host" />

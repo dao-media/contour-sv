@@ -1,6 +1,6 @@
-# T-Shaped Prototype (v0.15)
+# Contour Skill Visualizer (v0.15)
 
-T-Shaped is a designer self-assessment web app for mapping skill depth, classifying profile shape (I / T / Pi / M / X), and exporting results.
+Contour Skill Visualizer is a designer self-assessment web app for mapping skill depth, classifying profile shape (I / T / Pi / M / X), and exporting results.
 
 The **canonical app** lives in **`t-shaped/`**: [SolidJS](https://www.solidjs.com/) shell + [Vite](https://vitejs.dev/), step flow in **`appRuntime.js`**, templates in **`index.html`**.
 

@@ -1,4 +1,4 @@
-# T-Shaped (Vite app)
+# Contour Skill Visualizer (Vite app)
 
 Designer profile mapper (Solid + Vite + `appRuntime.js`). **Full setup, stack, Windows vs Mac, and Netlify** are documented in the [repository root `README.md`](../README.md#install-and-run).
 

@@ -723,7 +723,7 @@ export function attachAppShellElements() {
   appLayout = document.querySelector("#app-layout");
   sideInfoCard = document.querySelector("#side-info-card");
   if (!view || !appLayout || !sideInfoCard) {
-    throw new Error("T-Shaped: #view, #app-layout, and #side-info-card must be in the DOM");
+    throw new Error("Contour: #view, #app-layout, and #side-info-card must be in the DOM");
   }
 }
 
@@ -1291,7 +1291,7 @@ function buildEmailBody(shapeKey) {
   return [
     greeting,
     "",
-    "Thanks for testing T-Shaped, a tool I've recently begun building to give designers a high-level, big-picture view of their skills and competencies.",
+    "Thanks for testing Contour Skill Visualizer, a tool I've recently begun building to give designers a high-level, big-picture view of their skills and competencies.",
     "",
     `Since you're a ${shapeKey}-shaped designer, here's some info you may find interesting:`,
     "",
@@ -1302,7 +1302,7 @@ function buildEmailBody(shapeKey) {
     `Strengths: ${escapeForEmailLine(guide.strengths.join("; "))}`,
     `Blind spots: ${escapeForEmailLine(guide.weaknesses.join("; "))}`,
     "",
-    "Again, thanks for using T-Shaped. Your files are attached to this email as a zip file.",
+    "Again, thanks for using Contour Skill Visualizer. Your files are attached to this email as a zip file.",
     "",
     `If you have any questions or issues, reach out to Dane at hello@daneoleary.com. Want to provide feedback? Click here: ${feedbackUrl}`,
     "",
@@ -3296,7 +3296,7 @@ function runSelfTestIfQuery() {
 try {
   selfTestRankingLogic();
 } catch (e) {
-  console.error("T-Shaped selfTest failed", e);
+  console.error("Contour selfTest failed", e);
 }
 
 export async function bootstrapTShapedApp() {

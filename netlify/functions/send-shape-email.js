@@ -205,7 +205,7 @@ function buildHtmlBody({ firstName, shapeKey, feedbackUrl, guide }) {
     <div style="max-width:680px;margin:0 auto;padding:24px;">
       <div style="background:#151b2a;border:1px solid #2a3552;border-radius:14px;padding:20px;">
         <p style="margin:0 0 12px;">${greeting}</p>
-        <p style="margin:0 0 12px;">Thanks for testing T-Shaped, a tool I've recently begun building to give designers a high-level, big-picture view of their skills and competencies.</p>
+        <p style="margin:0 0 12px;">Thanks for testing Contour Skill Visualizer, a tool I've recently begun building to give designers a high-level, big-picture view of their skills and competencies.</p>
         <p style="margin:0 0 12px;">Since you're a <strong>${shapeKey}-shaped designer</strong>, here's some info you may find interesting:</p>
         <div style="margin:16px 0;padding:14px;border-radius:12px;background:#0f1422;border:1px solid #26314d;">
           ${buildGuideMeaningHtmlBlocks(guide)}
@@ -213,7 +213,7 @@ function buildHtmlBody({ firstName, shapeKey, feedbackUrl, guide }) {
           <p style="margin:0 0 8px;"><strong>Strengths:</strong> ${guideFieldPlain(guide.strengths)}</p>
           <p style="margin:0;"><strong>Blind spots:</strong> ${guideFieldPlain(guide.weaknesses)}</p>
         </div>
-        <p style="margin:0 0 12px;">Again, thanks for using T-Shaped. Your files are attached to this email as a zip file.</p>
+        <p style="margin:0 0 12px;">Again, thanks for using Contour Skill Visualizer. Your files are attached to this email as a zip file.</p>
         <p style="margin:0 0 18px;">If you have any questions or issues, reach out to Dane at <a style="color:#cfe0ff;" href="mailto:hello@daneoleary.com">hello@daneoleary.com</a>. Want to provide feedback? <a style="color:#cfe0ff;" href="${feedbackUrl}" target="_blank" rel="noopener noreferrer">Click here</a>.</p>
       </div>
       <div style="margin-top:12px;padding:14px 16px;background:#101726;border:1px solid #26314d;border-radius:12px;color:#c8d5f7;">
@@ -239,7 +239,7 @@ exports.handler = async (event) => {
     const userName = String(body.userName || "").trim();
     const shapeKey = String(body.shapeKey || "").trim() || "T";
     const svgString = String(body.svgString || "");
-    const baseName = sanitizeBaseName(body.baseName, `t-shaped-${shapeKey.toLowerCase()}-designer`);
+    const baseName = sanitizeBaseName(body.baseName, `contour-${shapeKey.toLowerCase()}-designer`);
     if (!isLikelyEmail(toEmail)) {
       return { statusCode: 400, body: JSON.stringify({ error: "Invalid email address." }) };
     }
@@ -251,7 +251,7 @@ exports.handler = async (event) => {
     const secure = String(process.env.SMTP_SECURE || "false").toLowerCase() === "true";
     const user = process.env.SMTP_USER || "";
     const pass = process.env.SMTP_PASS || "";
-    const from = process.env.SMTP_FROM || "T-Shaped <noreply@t-shaped.local>";
+    const from = process.env.SMTP_FROM || "Contour Skill Visualizer <noreply@contour.local>";
     if (!host) {
       return { statusCode: 500, body: JSON.stringify({ error: "SMTP_HOST is not configured." }) };
     }
@@ -272,7 +272,7 @@ exports.handler = async (event) => {
     const textBody = [
       firstName ? `Hi ${firstName},` : "Hello,",
       "",
-      "Thanks for testing T-Shaped, a tool I've recently begun building to give designers a high-level, big-picture view of their skills and competencies.",
+      "Thanks for testing Contour Skill Visualizer, a tool I've recently begun building to give designers a high-level, big-picture view of their skills and competencies.",
       "",
       `Since you're a ${shapeKey}-shaped designer, here's some info you may find interesting:`,
       "",
@@ -283,7 +283,7 @@ exports.handler = async (event) => {
       `Strengths: ${guideFieldPlain(guide.strengths)}`,
       `Blind spots: ${guideFieldPlain(guide.weaknesses)}`,
       "",
-      "Again, thanks for using T-Shaped. Your files are attached to this email as a zip file.",
+      "Again, thanks for using Contour Skill Visualizer. Your files are attached to this email as a zip file.",
       "",
       `If you have any questions or issues, reach out to Dane at hello@daneoleary.com. Want to provide feedback? Click here: ${feedbackUrl}`,
       "",
